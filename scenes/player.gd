@@ -11,10 +11,11 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	movement()
 func movement():
-	var x = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
+	var x = Input.get_vector("left","right","up","down")
+	print(x)
 	velocity = x *speed
 	move_and_slide()
 	
-	
+
 
 	
