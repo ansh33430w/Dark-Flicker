@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d1yyy6djg0p1s"]
+
+[ext_resource type="PackedScene" uid="uid://rjbawgafd0a5" path="res://scenes/player.tscn" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=1940672121]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1671909310]
+
+[node name="player" parent="." unique_id=144077914 instance=ExtResource("1_wtcfe")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1840068036]
+color = Color(0.039215688, 0.039215688, 0.039215688, 1)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=51070707]
+z_index = -3
+offset_left = -134.0
+offset_top = -123.0
+offset_right = 206.0
+offset_bottom = 125.0
