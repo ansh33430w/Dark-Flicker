@@ -77,5 +77,5 @@ func animation(direc):
 func Torch(direc):
 	if direc.length()>0.1:
 		lastangle = direc.angle()
-	torch.rotation = lastangle - (-PI/2) + PI
-	
+	torch.rotation = lastangle
+	torch.position = Vector2(cos(lastangle),sin(lastangle)) * 150
