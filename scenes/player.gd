@@ -6,7 +6,6 @@ const decay_rate = 1.0
 var cur_light 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 var lastdirectionname ="DOWN"
-@onready var torch: PointLight2D = $torch
 var lastangle = -PI/2
 
 
@@ -20,7 +19,7 @@ func _physics_process(delta: float) -> void:
 	var direction = Input.get_vector("left","right","up","down")
 	movement(direction)
 	animation(direction)
-	Torch(direction)
+
 func movement(direc):
 	velocity = direc *speed
 	move_and_slide()
@@ -72,10 +71,3 @@ func animation(direc):
 	lastdirectionname = dir
 	animated_sprite_2d.play("RUN_"+lastdirectionname)
 	print(lastdirectionname)
-
-
-func Torch(direc):
-	if direc.length()>0.1:
-		lastangle = direc.angle()
-	torch.rotation = lastangle
-	torch.position = Vector2(cos(lastangle),sin(lastangle)) * 150
