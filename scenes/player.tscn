@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://b7sf4fe4stt53" path="res://Eris Esra's Character Template 4.1/16x16/16x16 Run-Sheet.png" id="3_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://dpxcbdo1pjuqq" path="res://light_point.webp" id="5_qlg0r"]
 [ext_resource type="Script" uid="uid://dvo0mb84yc62p" path="res://scenes/node_2d.gd" id="5_tuyoq"]
+[ext_resource type="FontFile" uid="uid://bs0u0c2mpcgje" path="res://Blackcraft.ttf" id="6_tuyoq"]
+[ext_resource type="PackedScene" uid="uid://bvgqgb4qdwc04" path="res://canvas_layer.tscn" id="7_fjrip"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
 atlas = ExtResource("2_dqkch")
@@ -428,6 +430,20 @@ shadow_enabled = true
 texture = ExtResource("5_qlg0r")
 texture_scale = 0.9
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1275655216 node_paths=PackedStringArray("light")]
+[node name="Node2D" type="Node2D" parent="." unique_id=1275655216 node_paths=PackedStringArray("deathscreen", "light", "timerlabel")]
 script = ExtResource("5_tuyoq")
+deathscreen = NodePath("../CanvasLayer")
 light = NodePath("../lifelight")
+timerlabel = NodePath("../CanvasLayer3/Label")
+
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1094631336]
+
+[node name="Label" type="Label" parent="CanvasLayer3" unique_id=428582140]
+offset_left = 33.0
+offset_top = 19.0
+offset_right = 144.0
+offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("6_tuyoq")
+theme_override_font_sizes/font_size = 36
+
+[node name="CanvasLayer" parent="." unique_id=337905684 instance=ExtResource("7_fjrip")]

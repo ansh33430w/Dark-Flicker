@@ -61,4 +61,11 @@ theme_override_font_sizes/font_size = 64
 text = "START"
 flat = true
 
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1472639211]
+position = Vector2(1078, -437)
+color = Color(1, 0.26, 0.26, 1)
+blend_mode = 2
+height = 1.0
+max_distance = 0.0
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

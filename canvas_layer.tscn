@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bvgqgb4qdwc04"]
+
+[ext_resource type="Script" uid="uid://dygqg73eg8xmi" path="res://canvas_layer.gd" id="1_v2lfg"]
+[ext_resource type="FontFile" uid="uid://bs0u0c2mpcgje" path="res://Blackcraft.ttf" id="2_tg4cr"]
+[ext_resource type="Texture2D" uid="uid://coqpcqewg7b45" path="res://Background 300x128.png" id="3_37rai"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=337905684]
+script = ExtResource("1_v2lfg")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=287797519]
+z_index = -6
+color = Color(0.8338725, 0.2673608, 0.24933225, 1)
+
+[node name="Background300x128" type="Sprite2D" parent="." unique_id=1725264557]
+z_index = -11
+texture_repeat = 1
+position = Vector2(579, 326.00003)
+scale = Vector2(3.6062503, 3.6000001)
+texture = ExtResource("3_37rai")
+
+[node name="content" type="Node" parent="." unique_id=768813442]
+
+[node name="Button" type="Button" parent="content" unique_id=1585084270]
+offset_left = 257.0
+offset_top = 402.0
+offset_right = 442.0
+offset_bottom = 526.0
+theme_override_fonts/font = ExtResource("2_tg4cr")
+theme_override_font_sizes/font_size = 64
+text = "RETRY"
+flat = true
+
+[node name="Button2" type="Button" parent="content" unique_id=1459308697]
+offset_left = 735.0
+offset_top = 421.0
+offset_right = 897.0
+offset_bottom = 512.0
+theme_override_fonts/font = ExtResource("2_tg4cr")
+theme_override_font_sizes/font_size = 64
+text = "MENU"
+flat = true
+
+[node name="Label" type="Label" parent="content" unique_id=2009535211]
+offset_left = 334.0
+offset_top = 189.0
+offset_right = 808.0
+offset_bottom = 336.0
+theme_override_fonts/font = ExtResource("2_tg4cr")
+theme_override_font_sizes/font_size = 128
+text = "YOU DIED"
+
+[connection signal="pressed" from="content/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="content/Button2" to="." method="_on_button_2_pressed"]

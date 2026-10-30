@@ -71,3 +71,4 @@ func animation(direc):
 	lastdirectionname = dir
 	animated_sprite_2d.play("RUN_"+lastdirectionname)
 	print(lastdirectionname)
+	print(flip)
