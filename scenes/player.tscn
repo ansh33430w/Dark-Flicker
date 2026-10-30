@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://sd5xjoi1uiud" path="res://Eris Esra's Character Template 4.1/16x16/16x16 Idle-Sheet.png" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://b7sf4fe4stt53" path="res://Eris Esra's Character Template 4.1/16x16/16x16 Run-Sheet.png" id="3_qlg0r"]
 [ext_resource type="Texture2D" uid="uid://dpxcbdo1pjuqq" path="res://light_point.webp" id="5_qlg0r"]
+[ext_resource type="Script" uid="uid://dvo0mb84yc62p" path="res://scenes/node_2d.gd" id="5_tuyoq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
 atlas = ExtResource("2_dqkch")
@@ -426,3 +427,7 @@ energy = 3.0
 shadow_enabled = true
 texture = ExtResource("5_qlg0r")
 texture_scale = 0.9
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1275655216 node_paths=PackedStringArray("light")]
+script = ExtResource("5_tuyoq")
+light = NodePath("../lifelight")
