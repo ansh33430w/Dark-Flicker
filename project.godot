@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="DARK FLICKER"
+run/main_scene="uid://2yir80s5chrw"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Bg="*uid://cjp7s5svgt8lb"
 
 [display]
 

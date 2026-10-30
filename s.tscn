@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://2yir80s5chrw"]
+
+[ext_resource type="Script" uid="uid://vkuh7tnfktn5" path="res://s.gd" id="1_7ltdi"]
+[ext_resource type="Texture2D" uid="uid://yrnxh8i25t24" path="res://Dark Gothic Castle.png" id="1_l2r48"]
+[ext_resource type="FontFile" uid="uid://bs0u0c2mpcgje" path="res://Blackcraft.ttf" id="2_7ltdi"]
+[ext_resource type="Script" uid="uid://05habtn3yr8b" path="res://point_light_2d.gd" id="3_ldbyk"]
+
+[sub_resource type="Gradient" id="Gradient_v1vc3"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8vbdi"]
+gradient = SubResource("Gradient_v1vc3")
+fill = 1
+fill_from = Vector2(0.47965115, 0.44476745)
+
+[node name="MAINMENU" type="Control" unique_id=694208669]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7ltdi")
+
+[node name="DarkGothicCastle" type="Sprite2D" parent="." unique_id=1371483344]
+position = Vector2(572, 323.5)
+scale = Vector2(6.052083, 5.898148)
+texture = ExtResource("1_l2r48")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=737317209]
+color = Color(0.19434929, 0.19434926, 0.19434926, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1548559502]
+layout_mode = 0
+offset_left = 631.0
+offset_top = 252.0
+offset_right = 1097.0
+offset_bottom = 523.0
+theme_override_colors/font_color = Color(0.15607512, 0.15607512, 0.15607512, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_7ltdi")
+theme_override_font_sizes/font_size = 64
+text = "DARK FLICKER"
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1007033504]
+position = Vector2(594.4407, 313.38123)
+scale = Vector2(11.9715185, 6.555882)
+texture = SubResource("GradientTexture2D_8vbdi")
+texture_scale = 1.8
+script = ExtResource("3_ldbyk")
+
+[node name="Button" type="Button" parent="." unique_id=957421566]
+layout_mode = 0
+offset_left = 690.0
+offset_top = 294.0
+offset_right = 946.0
+offset_bottom = 505.0
+theme_override_fonts/font = ExtResource("2_7ltdi")
+theme_override_font_sizes/font_size = 64
+text = "START"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

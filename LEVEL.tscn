@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bf1rjyaydf7k4"]
+
+[ext_resource type="FontFile" uid="uid://bs0u0c2mpcgje" path="res://Blackcraft.ttf" id="1_jdkhc"]
+
+[node name="Label" type="Label" unique_id=1182433828]
+oversampling_with_scale = 1
+light_mask = 4
+visibility_layer = 4
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_jdkhc")
+theme_override_font_sizes/font_size = 32
+text = "level  : "
