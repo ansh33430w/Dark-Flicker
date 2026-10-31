@@ -56,5 +56,12 @@ D -- right
  go to https://anshshukla.itch.io/dark-flicker
   and hit play 
 
-  
+
+# Assets source...
+
+All the assets right goes to their respective owners. some are listed below
+
+
+Eris Esra's Character Template 4.1 --- https://erisesra.itch.io/character-templates-pack
+fount -- blackcroft https://www.dafont.com/blackcraft.font
    
